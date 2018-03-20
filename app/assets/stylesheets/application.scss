@@ -1,0 +1,151 @@
+ @import 'bootstrap';
+
+ body {
+   background-color: #f7f7f7;
+   font-family: 'Roboto', sans-serif;
+   font-size: 16pt;
+   color: rgb(110, 110, 110);
+ }
+
+ h1 {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 38pt;
+ }
+
+ h2 {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 22pt;
+ }
+
+ h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18pt;
+ }
+
+ .slider {
+   border-radius: 1em;
+   padding-top: 0px;
+ }
+
+ .masthead clearfix {
+   background: #36e29d;
+ }
+
+.event-map {
+  width: 95%;
+
+}
+
+.event-main-image {
+  width: 100%;
+}
+
+.show-top-row {
+  // max-height: 400px;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  background-color: #0f2937;
+
+}
+
+#map {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-wrapper {
+  padding: 0px;
+  margin:0px;
+  background-color: #0f2937;
+}
+
+.show-row {
+  margin: 0px;
+  padding: 0px;
+}
+
+.show-hide-over {
+  overflow:hidden;
+}
+
+#show-info {
+  background-color: #0f2937;
+  color: white;
+  padding: 15px;
+}
+
+.show-title-span {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3em;
+  color: #34a853;
+  font-weight: 800;
+}
+
+.nav-masthead {
+   background-color: black;
+   padding-left: 20px;
+}
+
+.nav-masthead a{
+  padding-left: 20px;
+}
+
+.card-heading {
+  color: rgb(110, 110, 110);
+  font-size: 20px;
+}
+
+.card-heading:hover {
+  text-decoration: none;
+  color: rgb(73, 73, 73);
+}
+
+.card hr {
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.card-custom {
+  width: 530px;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  // height: 120px;
+  font-size: 10pt;
+}
+
+.content-center {
+  margin-left: 40px;
+}
+
+.btn-success {
+  background-color: #3AE39F;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #00cb79;
+}
+
+.btn-secondary {
+  background-color: #e0e0e0;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #d3d3d3;
+}
+
+.btn-custom {
+  width: 35px;
+  height: 32px;
+  margin: 8px;
+  padding: 0px;
+  padding-top: 5px;
+}

@@ -1,0 +1,10 @@
+<div class="masthead clearfix">
+  <div class="inner">
+    <nav class="nav nav-masthead app-nav">
+		<%= link_to "Home", root_path %>
+    <%= link_to 'My Page', pages_dashboard_path %>
+		<%= link_to "Add a New Event", new_event_path %>
+  		<%= render "shared/devise_links" %>
+    </nav>
+  </div>
+</div>

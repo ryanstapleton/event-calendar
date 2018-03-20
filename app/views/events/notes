@@ -1,0 +1,7 @@
+<!-- address must be formatted to 7980S+State+St,Midvale,UT -->
+        <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{event.address}&ampzoom=13&ampscale=1&ampsize=600x400&ampmaptype=roadmap&ampformat=png&ampvisual_refresh=true&ampmarkers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C#{event.address}" %>
+
+
+
+        
+        <img src="<%= "https://maps.googleapis.com/maps/api/staticmap?center=#{@location}&ampzoom=13&ampscale=1&ampsize=600x300&ampmaptype=roadmap&ampformat=png&ampvisual_refresh=true&ampmarkers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C#{@location}"%>">

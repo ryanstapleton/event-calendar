@@ -1,0 +1,23 @@
+<% if current_user %>
+
+
+  <% if current_user.rsvps.where(event_id: event.id).count > 0 %>
+  
+    <%= link_to '<i class="fas fa-calendar-check"></i>'.html_safe, rsvp_path(@rsvps.where(event_id: event.id).first.id), method: :delete, class: "btn btn-success btn-custom" %>
+  <% else %>
+    
+    <%= link_to '<i class="far fa-calendar-check"></i>'.html_safe, rsvps_path(:event_id => event.id), method: :post, class: "btn btn-secondary btn-custom" %>
+  <% end %>
+
+  <% if current_user.favorites.where(event_id: event.id).count > 0 %>
+    
+    <%= link_to '<i class="fas fa-star"></i>'.html_safe, favorite_path(@favorites.where(event_id: event.id).first.id), method: :delete, class: "btn btn-success btn-custom" %>
+  <% else %>
+    
+    <%= link_to '<i class="far fa-star"></i>'.html_safe, favorites_path(:event_id => event.id), method: :post, class: "btn btn-secondary btn-custom" %>
+  <% end %>
+
+<% else %>
+  <%= link_to '<i class="far fa-calendar-check"></i>'.html_safe, new_user_session_path, class: "btn btn-secondary btn-custom" %>
+  <%= link_to '<i class="far fa-star"></i>'.html_safe, new_user_session_path, class: "btn btn-secondary btn-custom" %>
+<% end %>
