@@ -88,8 +88,11 @@
 }
 
 .nav-masthead {
-   background-color: black;
+   background-color: white;
    padding-left: 20px;
+   height: 75px;
+   padding-bottom: 5px;
+   border-bottom: 1px solid #e0e0e0;
 }
 
 .nav-masthead a{
@@ -148,4 +151,112 @@
   margin: 8px;
   padding: 0px;
   padding-top: 5px;
+}
+
+.body {
+  min-height: 100%;
+  margin-top: 30px;
+}
+
+.devcamp-logo {
+  width: 122.75px;
+  height: 60px;
+}
+
+.nav-stylying {
+  justify-content: center;
+  line-height: 30px;
+}
+
+.nav-links {
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+  padding-top: 23px;
+  padding-bottom: 15px;
+}
+
+.footer { 
+  fixed-height: 60px;
+  border-top: 1px solid #e0e0e0;
+  bottom:0;
+}
+
+.footer-left {
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
+  font-size: 18px;  
+}
+
+.footer-left-link {
+  font-weight: bold;
+  color: #3ae39f;
+}
+
+.footer-left-link a {
+  color: #3ae39f;
+}
+
+.footer-left-link a:link {
+  color: #3ae39f;
+}
+
+.footer-left-link a:visited {
+  color: #3ae39f;
+}
+
+.footer-left-link a:active {
+  color: #3ae39f;
+}
+
+.footer-left-link a:hover{
+  color: #3ae39f;
+  text-decoration: none;
+}
+
+.footer-button {
+  background-color: #3ae39f;
+  color: white;
+  height: 60px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.footer-button a {
+  color: white;
+}
+
+.footer-button a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-button a:hover{
+  color: white;
+}
+
+.footer-button a:visited {
+  color: white;
+}
+
+.footer-button a:active {
+  color: white;
+}
+
+.devise-signup {
+  padding-top: 15%;
+  padding-bottom: 15%
+}
+
+.devise-edit {
+  padding-top: 15%;
+  padding-bottom: 15%
+}
+
+.devise-login {
+  padding-top: 15%;
+  padding-bottom: 15%
 }

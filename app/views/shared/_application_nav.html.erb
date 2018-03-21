@@ -1,10 +1,20 @@
-<div class="masthead clearfix">
-  <div class="inner">
-    <nav class="nav nav-masthead app-nav">
-		<%= link_to "Home", root_path %>
-    <%= link_to 'My Page', pages_dashboard_path %>
-		<%= link_to "Add a New Event", new_event_path %>
-  		<%= render "shared/devise_links" %>
-    </nav>
-  </div>
-</div>
+<!-- <nav class = " " > -->
+
+<!--     <div class="masthead clearfix "> -->
+      <nav class="nav-masthead fixed-top">
+        <div class="row">
+            <div class="col-lg-1 col-xl-1"
+            <a href="https://bottega.tech/"> <%= image_tag('Devcamp_logo.png', class: "devcamp-logo")%>
+            </a>
+            </div>
+            <div class="col-lg-11 col-xl-11 nav-links">
+              <%= link_to "Home", root_path %>
+              <%= link_to 'My Page', pages_dashboard_path %>
+              <%= link_to "Add a New Event", new_event_path %>
+              <%= render "shared/devise_links" %>
+            </div>
+        </div>
+      </nav>
+<!--     </div> -->
+<!-- </nav> -->
+
