@@ -94,8 +94,11 @@
 }
 
 .nav-masthead {
-   background-color: black;
+   background-color: white;
    padding-left: 20px;
+   height: 75px;
+   padding-bottom: 5px;
+   border-bottom: 1px solid #e0e0e0;
 }
 
 .nav-masthead a{
@@ -156,8 +159,162 @@
   padding-top: 5px;
 }
 
+
+
 .card-main {
   margin-bottom: 20px;
   padding: 15px;
   background-color: rgb(236, 236, 236);
+}
+
+.body {
+  min-height: 100%;
+  margin-top: 30px;
+}
+
+.devcamp-logo {
+  padding-top: 10px;
+  width: 122.75px;
+  height: 60px;
+}
+
+.nav-styling {
+  justify-content: center;
+  line-height: 30px;
+}
+
+.nav-links {
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+  padding: 25px 100px 25px 40px;
+}
+
+.nav-links a {
+  color: #b7b7b7;
+}
+
+.nav-links a:hover {
+  color: #00cb76;
+  text-decoration: none;
+}
+
+.indiv-nav-links {
+  padding-left: 40px;
+}
+
+.footer { 
+  fixed-height: 60px;
+  border-top: 1px solid #e0e0e0;
+  background-color: white;
+}
+
+.footer-left {
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
+  font-size: 18px;  
+}
+
+.footer-left-link {
+  font-weight: bold;
+  color: #3ae39f;
+}
+
+.footer-left-link a {
+  color: #3ae39f;
+}
+
+.footer-left-link a:link {
+  color: #3ae39f;
+}
+
+.footer-left-link a:visited {
+  color: #3ae39f;
+}
+
+.footer-left-link a:active {
+  color: #3ae39f;
+}
+
+.footer-left-link a:hover {
+  color: #3ae39f;
+  text-decoration: none;
+}
+
+.footer-button {
+  background-color: #3ae39f;
+  color: white;
+  height: 60px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.footer-button a {
+  color: white;
+}
+
+.footer-button a:link {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-button a:hover{
+  color: white;
+}
+
+.footer-button a:visited {
+  color: white;
+}
+
+.footer-button a:active {
+  color: white;
+}
+
+.devise-signup {
+  padding-top: 15%;
+  padding-bottom: 15%
+}
+
+.devise-edit {
+  padding-top: 15%;
+  padding-bottom: 15%
+}
+
+.devise-login {
+  padding-top: 15%;
+  padding-bottom: 15%
+}
+
+html,body{
+  height: 100%
+}
+
+#holder{
+  min-height: 100%;
+  position:relative;
+}
+
+body{
+  margin-top: 60px;
+}
+
+footer{
+  height: 60px; 
+  width:100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
