@@ -1,7 +1,15 @@
 <div>
-  <div class="headings">  
+  <div class="container headings">  
     <h1>Upcoming Events</h1>
   </div>
+
+  <div class="row text-center">
+
+    <div class="col-12 calendar">
+      <iframe src="https://calendar.google.com/calendar/embed?src=jukinner%40gmail.com&ctz=America%2FDenver" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+  </div>
+
   <div class="row">
 
     <% @events.each do |event| %>
