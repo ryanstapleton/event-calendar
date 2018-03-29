@@ -18,22 +18,25 @@
     });
     </script>
   </head>
+    <div id="holder">
+      <header>
+          <%= render 'shared/application_nav' %>
+      </header>
 
-    <header>
-        <%= render 'shared/application_nav' %>
-    </header>
+      <body>
 
-    <div class="body">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
 
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+        <div class="container">
+          <%= yield %>
+        </div>
 
-      <%= yield %>
+      </body>
 
+      <footer>
+        <%= render 'shared/application_footer' %>
+      </footer>
     </div>
-
-    <footer>
-      <%= render 'shared/application_footer' %>
-    </footer>
 
 </html>

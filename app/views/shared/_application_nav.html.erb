@@ -8,9 +8,9 @@
             </a>
             </div>
             <div class="col-lg-11 col-xl-11 nav-links">
-              <%= link_to "Home", root_path %>
-              <%= link_to 'My Page', pages_dashboard_path %>
-              <%= link_to "Add a New Event", new_event_path %>
+              <span class="indiv-nav-links"><%= link_to "Home", root_path %></span>
+              <span class="indiv-nav-links"><%= link_to 'My Page', pages_dashboard_path %></span>
+              <span class="indiv-nav-links"><%= link_to "Add a New Event", new_event_path %></span>
               <%= render "shared/devise_links" %>
             </div>
         </div>

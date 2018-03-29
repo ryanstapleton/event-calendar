@@ -159,11 +159,12 @@
 }
 
 .devcamp-logo {
+  padding-top: 10px;
   width: 122.75px;
   height: 60px;
 }
 
-.nav-stylying {
+.nav-styling {
   justify-content: center;
   line-height: 30px;
 }
@@ -172,14 +173,26 @@
   align-items: center;
   display: flex;
   font-size: 18px;
-  padding-top: 23px;
-  padding-bottom: 15px;
+  padding: 25px 100px 25px 40px;
+}
+
+.nav-links a {
+  color: #b7b7b7;
+}
+
+.nav-links a:hover {
+  color: #00cb76;
+  text-decoration: none;
+}
+
+.indiv-nav-links {
+  padding-left: 40px;
 }
 
 .footer { 
   fixed-height: 60px;
   border-top: 1px solid #e0e0e0;
-  bottom:0;
+  background-color: white;
 }
 
 .footer-left {
@@ -211,7 +224,7 @@
   color: #3ae39f;
 }
 
-.footer-left-link a:hover{
+.footer-left-link a:hover {
   color: #3ae39f;
   text-decoration: none;
 }
@@ -259,4 +272,39 @@
 .devise-login {
   padding-top: 15%;
   padding-bottom: 15%
+}
+
+html,body{
+    height: 100%
+}
+
+#holder{
+    min-height: 100%;
+    position:relative;
+}
+
+body{
+    margin-top: 60px;
+}
+
+footer{
+    height: 60px; 
+    width:100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.calendar {
+  width: 100%;
 }
