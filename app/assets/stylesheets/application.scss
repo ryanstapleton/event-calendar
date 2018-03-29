@@ -22,6 +22,12 @@
   font-size: 18pt;
  }
 
+ p {
+   font-size: 14pt;
+   padding: 0px;
+   margin: 0px;
+ }
+
  .slider {
    border-radius: 1em;
    padding-top: 0px;
@@ -148,4 +154,10 @@
   margin: 8px;
   padding: 0px;
   padding-top: 5px;
+}
+
+.card-main {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: rgb(236, 236, 236);
 }
