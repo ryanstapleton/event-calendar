@@ -5,7 +5,7 @@
    font-family: 'Roboto', sans-serif;
    font-size: 16pt;
    color: rgb(110, 110, 110);
-   margin-top: 60px;
+   margin-top: 80px;
  }
 
  h1 {
@@ -294,6 +294,7 @@
 .devise-login {
   padding-top: 15%;
   padding-bottom: 15%
+
 }
 
 html,body{
@@ -321,4 +322,8 @@ footer{
     padding-right: 0;
     padding-left: 0;
   }
+}
+
+.devise-card {
+  padding: 40px;
 }
