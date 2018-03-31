@@ -183,25 +183,31 @@
   font-size: 18px;  
 }
 
-.footer-left-link {
-  font-weight: bold;
-  color: #3ae39f;
-}
 
 .footer-left-link a {
   color: #3ae39f;
+  text-decoration: none;
 }
 
 .footer-left-link a:link {
   color: #3ae39f;
+  text-decoration: none;
 }
 
 .footer-left-link a:visited {
   color: #3ae39f;
+  text-decoration: none;
 }
 
 .footer-left-link a:active {
   color: #3ae39f;
+  text-decoration: none;
+}
+
+.footer-left-link {
+  font-weight: bold;
+  color: #3ae39f;
+  text-decoration: none;
 }
 
 .footer-left-link a:hover {
@@ -241,6 +247,10 @@
 
 //========== Devise ===========
 
+.devise-card {
+  padding: 40px;
+}
+
 .devise-signup {
   padding-top: 15%;
   padding-bottom: 15%
@@ -254,6 +264,7 @@
 .devise-login {
   padding-top: 15%;
   padding-bottom: 15%
+
 }
 
 html,body{
@@ -274,7 +285,7 @@ footer{
 }
 
 // ============== Show Page ===============
-
+  
 .sub-nav a {
   font-family: 'Montserrat';
   font-size: 13px;
