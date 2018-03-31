@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   before_action :set_event_show, only: [:edit, :update, :destroy]
   
   def index
-    @events = Event.all
+    @events = Event.order(date: :desc)
     @rsvps = current_user.rsvps if current_user
     @favorites = current_user.favorites if current_user
   end

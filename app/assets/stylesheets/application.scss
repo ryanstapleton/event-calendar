@@ -24,74 +24,26 @@
  }
 
  p {
-   font-size: 14pt;
+   font-size: 12pt;
    padding: 0px;
    margin: 0px;
  }
 
- .slider {
-   border-radius: 1em;
-   padding-top: 0px;
+ .card {
+  border-radius: 7px;
  }
 
- .masthead clearfix {
-   background: #36e29d;
- }
+ .no-gutters {
+  margin-right: 0;
+  margin-left: 0;
 
-.event-map {
-  width: 95%;
-
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
-.event-main-image {
-  width: 100%;
-}
-
-.show-top-row {
-  // max-height: 400px;
-  overflow: hidden;
-  padding: 0px;
-  margin: 0px;
-  background-color: #0f2937;
-}
-
-#map {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.show-wrapper {
-  padding: 0px;
-  margin:0px;
-  background-color: #0f2937;
-}
-
-.show-row {
-  margin: 0px;
-  padding: 0px;
-}
-
-.show-hide-over {
-  overflow:hidden;
-}
-
-#show-info {
-  background-color: #0f2937;
-  color: white;
-  padding: 15px;
-}
-
-.show-title-span {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 3em;
-  color: #34a853;
-  font-weight: 800;
-}
+//========== Navigation ===========
 
 .nav-masthead {
    background-color: white;
@@ -103,69 +55,6 @@
 
 .nav-masthead a{
   padding-left: 20px;
-}
-
-.card-heading {
-  color: rgb(110, 110, 110);
-  font-size: 20px;
-}
-
-.card-heading:hover {
-  text-decoration: none;
-  color: rgb(73, 73, 73);
-}
-
-.card hr {
-  margin: 0px;
-  margin-bottom: 10px;
-}
-
-.card-custom {
-  width: 530px;
-  border-radius: 8px;
-  padding: 10px;
-  margin: 10px;
-  // height: 120px;
-  font-size: 10pt;
-}
-
-.content-center {
-  margin-left: 40px;
-}
-
-.btn-success {
-  background-color: #3AE39F;
-  border: none;
-}
-
-.btn-success:hover {
-  background-color: #00cb79;
-}
-
-.btn-secondary {
-  background-color: #e0e0e0;
-  border: none;
-}
-
-.btn-secondary:hover {
-  background-color: #d3d3d3;
-}
-
-.btn-custom {
-  width: 35px;
-  height: 32px;
-  margin: 8px;
-  padding: 0px;
-  padding-top: 5px;
-}
-
-
-
-.card-main {
-  
-  padding: 15px;
-  background-color: rgb(236, 236, 236);
-  // margin-bottom: 60px;
 }
 
 .body {
@@ -203,6 +92,81 @@
 .indiv-nav-links {
   padding-left: 40px;
 }
+
+//========== Events ===========
+
+.card-heading {
+  color: rgb(110, 110, 110);
+  font-size: 20px;
+}
+
+.card-heading:hover {
+  text-decoration: none;
+  color: rgb(73, 73, 73);
+}
+
+.card hr {
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.card-custom {
+  width: 530px;
+  padding: 10px;
+  margin: 10px;
+  // height: 120px;
+  font-size: 10pt;
+}
+
+.content-center {
+  margin-left: 40px;
+}
+
+.thumb-image {
+
+  width: 100px;
+  height: 100px;
+
+}
+
+.thumb-image-trim {
+  max-width: 100px;
+  overflow: hidden;
+}
+
+.btn-success {
+  background-color: #3AE39F;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #00cb79;
+}
+
+.btn-secondary {
+  background-color: #e0e0e0;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #d3d3d3;
+}
+
+.btn-custom {
+  width: 35px;
+  height: 32px;
+  margin: 8px;
+  padding: 0px;
+  padding-top: 5px;
+}
+
+
+.card-main {
+  padding: 15px;
+  background-color: rgb(243, 243, 243);
+}
+
+//========== Footer ===========
 
 .footer { 
   fixed-height: 60px;
@@ -281,6 +245,12 @@
   color: white;
 }
 
+//========== Devise ===========
+
+.devise-card {
+  padding: 40px;
+}
+
 .devise-signup {
   padding-top: 15%;
   padding-bottom: 15%
@@ -314,16 +284,45 @@ footer{
   bottom: 0;
 }
 
-.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-
-  > [class*="col-"] {
-    padding-right: 0;
-    padding-left: 0;
-  }
+// ============== Show Page ===============
+  
+.sub-nav a {
+  font-family: 'Montserrat';
+  font-size: 13px;
+  color: rgb(110, 110, 110);
 }
 
-.devise-card {
-  padding: 40px;
+.sub-nav a:hover {
+  text-decoration: none;
+  color: #00cb79;
+}
+
+.event-map {
+  height: 100%;
+}
+
+.event-image {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  width: 100%;
+}
+
+div.main-image-trim {
+  max-height: 600px;
+  overflow: hidden;
+}
+
+#map {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-row {
+  height: 400px;
+}
+
+.row-element {
+  padding: 15px;
 }
