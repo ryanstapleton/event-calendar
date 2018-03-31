@@ -57,6 +57,44 @@
   padding-left: 20px;
 }
 
+.body {
+  min-height: 100%;
+  margin-top: 30px;
+}
+
+.devcamp-logo {
+  padding-top: 10px;
+  width: 122.75px;
+  height: 60px;
+}
+
+.nav-styling {
+  justify-content: center;
+  line-height: 30px;
+}
+
+.nav-links {
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+  padding: 25px 100px 25px 40px;
+}
+
+.nav-links a {
+  color: #b7b7b7;
+}
+
+.nav-links a:hover {
+  color: #00cb76;
+  text-decoration: none;
+}
+
+.indiv-nav-links {
+  padding-left: 40px;
+}
+
+//========== Events ===========
+
 .card-heading {
   color: rgb(110, 110, 110);
   font-size: 20px;
@@ -123,47 +161,12 @@
 }
 
 
-
 .card-main {
   padding: 15px;
   background-color: rgb(243, 243, 243);
 }
 
-.body {
-  min-height: 100%;
-  margin-top: 30px;
-}
-
-.devcamp-logo {
-  padding-top: 10px;
-  width: 122.75px;
-  height: 60px;
-}
-
-.nav-styling {
-  justify-content: center;
-  line-height: 30px;
-}
-
-.nav-links {
-  align-items: center;
-  display: flex;
-  font-size: 18px;
-  padding: 25px 100px 25px 40px;
-}
-
-.nav-links a {
-  color: #b7b7b7;
-}
-
-.nav-links a:hover {
-  color: #00cb76;
-  text-decoration: none;
-}
-
-.indiv-nav-links {
-  padding-left: 40px;
-}
+//========== Footer ===========
 
 .footer { 
   fixed-height: 60px;
@@ -235,6 +238,8 @@
 .footer-button a:active {
   color: white;
 }
+
+//========== Devise ===========
 
 .devise-signup {
   padding-top: 15%;
