@@ -10,32 +10,35 @@
       </ul>
     </div>
   <% end %>
-  
-  <div class="form-control">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :event_title %>
-  </div>
-  <div class="form-control">
-    <%= form.label :body %>
-    <%= form.text_area :body, id: :event_body %>
-  </div>
 
-  <div class="form-control">
-    <%= form.label :location %>
-    <%= form.text_area :location, id: :event_location%>
-  </div>
+  <div>
+    <div class="form-fields">
+      Title of your event:
+      <div><%= form.text_field :title, id: :event_title, size: "25x1", placeholder: "Event title here", class: "form-text" %></div>
+    </div>
 
-   <div class="form-control">
-    <%= form.label :date %>
-    <%= form.date_field :date, id: :event_date %>
-  </div>
+    <div class="form-fields">
+      Please describe your event:
+      <div><%= form.text_area :body, id: :event_body, size: "25x3", placeholder: "An event for ...", class: "form-text" %></div>
+    </div>
 
-  <div class="form-control">
-    <%= form.label :main_image %>
-    <%= form.file_field :main_image, id: :image %>
-  </div>
+    <div class="form-fields">
+      Where and when is your event taking place?:
+      <div><%= form.text_area :location, id: :event_location, placeholder: "Full address, floor number, time of day, etc..", size: "25x3", class: "form-text"%></div>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
+     <div class="form-fields">
+      Date of the event.
+      <div><%= form.date_field :date, id: :event_date %></div>
+    </div>
+
+    <div class="form-fields">
+      Please upload an image for the event. 
+      <div><%= form.file_field :main_image, id: :image %></div>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "Submit", class: "btn btn-primary btn-lg event-button" %>
+    </div>
   </div>
 <% end %>
