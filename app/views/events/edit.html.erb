@@ -1,10 +1,18 @@
 <div class="contatiner">
 	<div class="new_event">
-
-		<h1>Editing Your Event</h1>
-		<%= render 'form', event: @event %>
-		<%= link_to 'Show', @event %> |
-		<%= link_to 'Home', events_path %>
+    <div class="col s12 m5">
+      <div class="card-panel">
+        <div class="card devise-card">
+      		<h1>Editing Your Event</h1>
+            <div class="form-fields">
+              Use the form below to edit your previously created event. 
+            </div>
+      		    <%= render 'form', event: @event %>
+      		  <div><%= link_to 'Event Details Page', @event %> | <%= link_to 'Home', events_path %>
+            </div>
+        </div>
+      </div>
+    </div>
 	</div>
 </div>
 
