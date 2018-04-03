@@ -2,6 +2,7 @@ class EventsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :new, :edit, :update, :destroy]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :set_event_show, only: [:edit, :update, :destroy]
+  access all: [:show, :index], admin: :all
   
   def index
     @events = Event.order(date: :desc)

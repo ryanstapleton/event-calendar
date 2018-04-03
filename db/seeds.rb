@@ -2,8 +2,10 @@ User.create!(name: "George Washington", email: "test@test.com", password: "12345
 User.create!(name: "Abraham Lincoln", email: "test1@test.com", password: "123456", password_confirmation: "123456")
 User.create!(name: "Thomas Jefferson", email: "test2@test.com", password: "123456", password_confirmation: "123456")
 User.create!(name: "Alexander Hamilton", email: "test3@test.com", password: "123456", password_confirmation: "123456")
+User.create!(name: "Admin", email: "admin@admin.com", password: "123456", password_confirmation: "123456", roles: "admin")
 
 puts "4 Users created!"
+puts "1 Admin created!"
 
 5.times do |e|
   Event.create!(title: "#{User.find(1).name} event #{e + 1}", date: "01/01/2001", body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.", location: "Somewhere #{e +1}", user_id: 1, main_image: Rails.root.join("http://via.placeholder.com/600x400"), thumb_image: "http://via.placeholder.com/100x100")
