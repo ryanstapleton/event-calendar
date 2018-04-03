@@ -1,6 +1,5 @@
 <% if current_user %>
 
-
   <% if current_user.rsvps.where(event_id: event.id).count > 0 %>
   
     <%= link_to '<i class="fas fa-calendar-check"></i>'.html_safe, rsvp_path(@rsvps.where(event_id: event.id).first.id), method: :delete, class: "btn btn-success btn-custom" %>

@@ -3,7 +3,14 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
 
   devise_for :users, path: '', path_names: {sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
-  resources :events
+  
+  resources :events do
+    member do
+      get :approve
+      get :reject
+    end
+  end
+  
   resources :rsvps, only: [:new, :create, :destroy]
   resources :favorites, only: [:new, :create, :destroy]
 

@@ -36,7 +36,7 @@
             </div>
 
             <div class="col-2">
-              <%= render partial: 'shared/buttons', locals: {event: event} %>
+              <%= render partial: 'shared/admin_buttons', locals: {event: event} %>
             </div>
 
           </div> <!-- Row -->
@@ -69,7 +69,38 @@
             </div>
 
             <div class="col-2">
-              <%= render partial: 'shared/buttons', locals: {event: event} %>
+            </div>
+
+          </div> <!-- Row -->
+        </div> <!-- Card -->
+      <% end %>
+
+    </div>
+  </div>
+
+    <div>
+    <div class="headings text-center">  
+      <h2>Rejected Events</h2>
+    </div>
+    <div class="row justify-content-center">
+
+      <% @rejected_events.each do |event| %>
+        <div class="card card-custom">
+          <div class="row">
+
+            <div class="col-2 thumb-image">
+              <%= image_tag event.main_image, width: 100, height: 100 %>            
+            </div>
+
+            <div class="col-7 content-center">
+              <h3><%= link_to truncate(event.title.titleize, length: 25), event, class: "card-heading" %></h3>
+              <hr>
+              <span style="color: #3AE39F">When: &nbsp;&nbsp;</span><%= event.date.strftime("%A, %B %Y") %> 
+              <br>
+              <span style="color: #3AE39F">Where: &nbsp;</span><%= event.location %>
+            </div>
+
+            <div class="col-2">
             </div>
 
           </div> <!-- Row -->

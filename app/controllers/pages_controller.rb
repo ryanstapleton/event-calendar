@@ -10,5 +10,6 @@ class PagesController < ApplicationController
   def admin
     @pending_events = Event.where(status: :pending).order(date: :desc)
     @approved_events = Event.where(status: :approved).order(date: :desc)
+    @rejected_events = Event.where(status: :rejected).order(date: :desc)
   end
 end
