@@ -1,11 +1,11 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :new, :edit, :update, :destroy]
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :set_event, only: [:show, :edit, :update, :destroy, :approve, :reject]
   before_action :set_event_show, only: [:edit, :update, :destroy]
-  access all: [:show, :index], admin: :all
+  access all: [:show, :index], user: {except: [:admin]}, admin: :all
   
   def index
-    @events = Event.order(date: :desc)
+    @events = Event.where(status: :approved).order(date: :desc)
     @rsvps = current_user.rsvps if current_user
     @favorites = current_user.favorites if current_user
   end
@@ -51,6 +51,22 @@ class EventsController < ApplicationController
     @event.destroy
     respond_to do |format|
       format.html { redirect_to events_url, notice: 'Your event was deleted.' }
+    end
+  end
+
+  def approve
+    @event.approved!
+    respond_to do |format|
+      format.html { redirect_to admin_path, notice: 'The event was approved.' }
+    end
+
+    # TODO: API CALL - insert event into API
+  end
+
+  def reject
+    @event.rejected!
+    respond_to do |format|
+      format.html { redirect_to admin_path, notice: 'The event was rejected.' }
     end
   end
 

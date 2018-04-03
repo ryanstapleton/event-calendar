@@ -55,3 +55,5 @@ Feature REQs:
 TODOs:
 - [ ] Add phone number to users
 - [ ] Check Google API for needed parameters on events table
+- [ ] Remove edit functionality for users when event is approved
+- [ ] Decide what to do with rejected events
