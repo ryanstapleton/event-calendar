@@ -61,5 +61,5 @@ gem 'carrierwave-aws', '~> 1.3'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 
 gem 'petergate', '~> 1.8', '>= 1.8.1'
-
+gem 'google-api-client', '~>0.9', require: 'google/apis/calendar_v3'
 ruby "2.4.1"
