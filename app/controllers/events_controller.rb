@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :new, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:create, :new, :edit, :update, :destroy, :approve, :reject]
   before_action :set_event, only: [:show, :edit, :update, :destroy, :approve, :reject]
-  before_action :set_event_show, only: [:edit, :update, :destroy]
+  before_action :modify_event, only: [:edit, :update, :destroy]
   access all: [:show, :index], user: {except: [:admin]}, admin: :all
   
   def index
@@ -12,16 +12,15 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @location = "2912+Executive+Pkwy,Lehi,UT"
   end
-
 
   def new
     @event = Event.new
+    session[:return_to] = request.referer
   end
 
-
   def edit
+    session[:return_to] = request.referer
   end
 
   def create
@@ -76,11 +75,15 @@ class EventsController < ApplicationController
       @event = Event.find(params[:id])
     end
 
-    def set_event_show
-      @event = current_user.events.find(params[:id])
+    def modify_event
+      if current_user.roles.include?(:admin)
+        @event = Event.find(params[:id])
+      else
+        @event = current_user.events.find(params[:id])
+      end
 
       rescue ActiveRecord::RecordNotFound
-      redirect_to(root_url, :notice => 'Record not found')
+      redirect_to(root_url, :notice => 'Record belongs to another user')
     end
 
     def event_params

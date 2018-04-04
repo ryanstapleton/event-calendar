@@ -1,8 +1,10 @@
 <div class="sub-nav">
   <%= link_to "< BACK", events_path %>
   <% if current_user %>
-    <%= link_to 'EDIT', edit_event_path(@event) %>
-    <%= link_to 'DELETE', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% if current_user.events.include?(@event) || current_user.roles.include?(:admin) %>
+      <%= link_to 'EDIT', edit_event_path(@event) %>
+      <%= link_to 'DELETE', @event, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
   <% end %>
 </div>
 
