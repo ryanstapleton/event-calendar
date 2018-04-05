@@ -8,6 +8,7 @@ class EventsController < ApplicationController
     @events = Event.where(status: :approved).order(date: :desc)
     @rsvps = current_user.rsvps if current_user
     @favorites = current_user.favorites if current_user
+    @calendar_list
   end
 
   def show
@@ -70,52 +71,6 @@ class EventsController < ApplicationController
     end
   end
 
-  def redirect
-    client = Signet::OAuth2::Client.new(client_options)
-
-    redirect_to client.authorization_uri.to_s
-  end
-
-  def callback
-    client = Signet::OAuth2::Client.new(callback_options)
-
-    response = client.fetch_access_token!
-
-    session[:access_token] = response['access_token']
-
-    redirect_to url_for(:action => :calendars)
-  end
-
-  def calendars
-    client = Signet::OAuth2::Client.new(access_token: session[:access_token])
-
-    service = Google::Apis::CalendarV3::CalendarService.new
-
-    service.authorization = client
-
-    @calendar_list = service.list_calendar_lists
-  end
-
-  def create_event
-    client = Signet::OAuth2::Client.new(client_options)
-    client.update!(session[:authorization])
-
-    service = Google::Apis::CalendarV3::CalndarService.new
-    service.authorization = client
-
-    today = Date.today
-
-    event = Google::Apis::CalendarV3::Event.new({
-      start: Google::Apis::CalendarV3::EventDateTime.new(date:today + 1),
-    end: Google::Apis::CalendarV3::EventDateTime.new(date:today + 2),
-    summary: 'New Event via Google API call!'
-      })
-
-    service.insert_event(params[:calendar_id], event)
-
-    redirect_to events_url(calendar_id: params[:calendar_id])
-  end
-
   private
 
     def set_event
@@ -131,26 +86,5 @@ class EventsController < ApplicationController
 
     def event_params
       params.require(:event).permit(:title, :body, :main_image, :date, :location)
-    end
-
-    def client_options
-      {
-        client_id: Rails.application.secrets.google_client_id,
-        client_secret: Rails.application.secrets.google_client_secret,
-        authorization_uri: 'https://accounts.google.com/o/oauth2/auth',
-        token_credential_uri: 'https://accounts.google.com/o/oauth2/token', 
-        scope: Google::Apis::CalendarV3::AUTH_CALENDAR,
-        redirect_uri: url_for(:action => :callback)
-      }
-    end
-
-    def callback_options
-      {
-        client_id: Rails.application.secrets.google_client_id,
-        client_secret: Rails.application.secrets.google_client_secret,
-        token_credential_uri: 'https://accounts.google.com/o/oauth2/token',
-        redirect_uri: uri_for(:action => :callback)
-        code: params[:code]
-      }
     end
 end
