@@ -1,112 +1,58 @@
 <div class="card card-main">
-  <div class="headings">
-    <div class="row">
-      <div class="col-9">
-        <h1>Admin Dashboard</h1>
-        <p>Welcome <%= current_user.name %></p>
-      </div>
-      <div class="col-3 text-right">
-        <p>Pending Events: <%= @pending_events.count %></p>
-        <p>Approved Events: <%= @approved_events.count %></p>
-      </div>
+  <div class="row headings">
+    <div class="col-9">
+      <h1>Admin Dashboard</h1>
+      <p>Welcome <%= current_user.name %></p>
+    </div>
+    <div class="col-3 text-right">
+      <h3>Pending Events: <%= @pending_events.count %></h3>
+      <p>Approved Events: <%= @approved_events.count %></p>
+      <p>Rejected Events: <%= @rejected_events.count %></p>
     </div>
   </div>
   <hr>
 
   <div>
-    <div class="headings text-center">  
+    <div class="headings">  
       <h2>Pending Events</h2>
     </div>
-    <div class="row justify-content-center">
-
-      <% @pending_events.each do |event| %>
-        <div class="card card-custom">
-          <div class="row">
-
-            <div class="col-2 thumb-image">
-              <%= image_tag event.main_image, width: 100, height: 100 %>            
-            </div>
-
-            <div class="col-7 content-center">
-              <h3><%= link_to truncate(event.title.titleize, length: 25), event, class: "card-heading" %></h3>
-              <hr>
-              <span style="color: #3AE39F">When: &nbsp;&nbsp;</span><%= event.date.strftime("%A, %B %Y") %> 
-              <br>
-              <span style="color: #3AE39F">Where: &nbsp;</span><%= event.location %>
-            </div>
-
-            <div class="col-2">
-              <%= render partial: 'shared/admin_buttons', locals: {event: event} %>
-            </div>
-
-          </div> <!-- Row -->
-        </div> <!-- Card -->
-      <% end %>
-
-    </div>
+    <hr>
+    <% if @pending_events.empty? %>
+      <div class="indentions">
+        <p>You have no pending events <span style="font-size: 1.4em;"><i class="far fa-smile"></i></span></p>
+      </div>
+    <% else %>
+      <%= render partial: 'shared/cards', locals: {events: @pending_events, button_partial: 'shared/admin_buttons'} %>
+    <% end %>
   </div>
 
   <div>
-    <div class="headings text-center">  
+    <hr>
+    <div class="headings">  
       <h2>Approved Events</h2>
     </div>
-    <div class="row justify-content-center">
-
-      <% @approved_events.each do |event| %>
-        <div class="card card-custom">
-          <div class="row">
-
-            <div class="col-2 thumb-image">
-              <%= image_tag event.main_image, width: 100, height: 100 %>            
-            </div>
-
-            <div class="col-7 content-center">
-              <h3><%= link_to truncate(event.title.titleize, length: 25), event, class: "card-heading" %></h3>
-              <hr>
-              <span style="color: #3AE39F">When: &nbsp;&nbsp;</span><%= event.date.strftime("%A, %B %Y") %> 
-              <br>
-              <span style="color: #3AE39F">Where: &nbsp;</span><%= event.location %>
-            </div>
-
-            <div class="col-2">
-            </div>
-
-          </div> <!-- Row -->
-        </div> <!-- Card -->
-      <% end %>
-
-    </div>
+    <hr>
+    <% if @approved_events.empty? %>
+      <div class="indentions">
+        <p>There are no approved events</p>
+      </div>
+    <% else %>
+      <%= render partial: 'shared/cards', locals: {events: @approved_events, button_partial: ''} %>
+    <% end %>
   </div>
 
-    <div>
-    <div class="headings text-center">  
+  <div>
+    <hr>
+    <div class="headings">  
       <h2>Rejected Events</h2>
     </div>
-    <div class="row justify-content-center">
-
-      <% @rejected_events.each do |event| %>
-        <div class="card card-custom">
-          <div class="row">
-
-            <div class="col-2 thumb-image">
-              <%= image_tag event.main_image, width: 100, height: 100 %>            
-            </div>
-
-            <div class="col-7 content-center">
-              <h3><%= link_to truncate(event.title.titleize, length: 25), event, class: "card-heading" %></h3>
-              <hr>
-              <span style="color: #3AE39F">When: &nbsp;&nbsp;</span><%= event.date.strftime("%A, %B %Y") %> 
-              <br>
-              <span style="color: #3AE39F">Where: &nbsp;</span><%= event.location %>
-            </div>
-
-            <div class="col-2">
-            </div>
-
-          </div> <!-- Row -->
-        </div> <!-- Card -->
-      <% end %>
-
-    </div>
+    <hr>
+    <% if @rejected_events.empty? %>
+      <div class="indentions">
+        <p>There are no rejected events</p>
+      </div>
+    <% else %>
+      <%= render partial: 'shared/cards', locals: {events: @rejected_events, button_partial: ''} %>
+    <% end %>
   </div>
 </div>
