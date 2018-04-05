@@ -344,9 +344,13 @@ div.main-image-trim {
   background-color: #3ae39f;
   color:  white;
   border: none;
-  width: 200px;
   margin-top: 15px;
   margin-bottom: 15px;
+  font-size: 1.0em;
+}
+
+.event-button:hover {
+  background-color: #00b675;
 }
 
 .form-fields {
