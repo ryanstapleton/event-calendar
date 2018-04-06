@@ -6,7 +6,7 @@ body {
   font-family: 'Monsterrat', sans-serif;
   font-size: 16pt;
   color: rgb(110, 110, 110);
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 h1 {
@@ -25,6 +25,10 @@ p {
   font-size: 12pt;
   padding: 0px;
   margin: 0px;
+}
+
+a {
+  color: #3AE39F;
 }
 
 .card {
@@ -99,7 +103,7 @@ p {
 }
 
 .nav-links a:hover {
-  color: #00cb76;
+  color: #3AE39F;
   text-decoration: none;
 }
 
@@ -262,24 +266,8 @@ p {
   padding: 40px;
 }
 
-.devise-signup {
-  padding-top: 15%;
-  padding-bottom: 15%
-}
-
-.devise-edit {
-  padding-top: 15%;
-  padding-bottom: 15%
-}
-
-.devise-login {
-  padding-top: 15%;
-  padding-bottom: 15%
-
-}
-
 html,body{
-  height: 100%
+  height: 100%;
 }
 
 #holder{

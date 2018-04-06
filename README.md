@@ -47,7 +47,7 @@ Feature REQs:
 - [x] Users dashboard page (Rails)
 - [x] Design layouts (Bootsrap)
 - [x] My upcoming events (Rails)
-- [ ] An event must be approved by admin to be published (Petergate)
+- [x] An event must be approved by admin to be published (Petergate)
 - [x] Styling ala "devcamp" (Bootstrap)
 - [ ] Reminder of event (SMS - Twilio)
 - [ ] RSVP reminder (email, sms) - mailgun, twilio
