@@ -1,7 +1,7 @@
 <div class="card card-main">
   <div class="row headings">
     <div class="col-9">
-      <h1>Admin Dashboard</h1>
+      <h1>ADMIN DASHBOARD</h1>
       <p>Welcome <%= current_user.name %></p>
     </div>
     <div class="col-3 text-right">
@@ -14,7 +14,7 @@
 
   <div>
     <div class="headings">  
-      <h2>Pending Events</h2>
+      <h3>PENDING EVENTS</h3>
     </div>
     <hr>
     <% if @pending_events.empty? %>
@@ -29,7 +29,7 @@
   <div>
     <hr>
     <div class="headings">  
-      <h2>Approved Events</h2>
+      <h3>APPROVED EVENTS</h3>
     </div>
     <hr>
     <% if @approved_events.empty? %>
@@ -44,7 +44,7 @@
   <div>
     <hr>
     <div class="headings">  
-      <h2>Rejected Events</h2>
+      <h3>REJECTED EVENTS</h3>
     </div>
     <hr>
     <% if @rejected_events.empty? %>
