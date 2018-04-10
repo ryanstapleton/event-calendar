@@ -3,6 +3,7 @@
     <div class="col-9">
       <h1>ADMIN DASHBOARD</h1>
       <p>Welcome <%= current_user.name %></p>
+      <p><%= link_to "Sign In with Google",  user_google_oauth2_omniauth_authorize_path %>  </p>
     </div>
     <div class="col-3 text-right">
       <h3>Pending Events: <%= @pending_events.count %></h3>

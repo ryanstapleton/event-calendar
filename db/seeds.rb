@@ -2,7 +2,7 @@ User.create!(name: "George Washington", email: "test@test.com", password: "12345
 User.create!(name: "Abraham Lincoln", email: "test1@test.com", password: "123456", password_confirmation: "123456")
 User.create!(name: "Thomas Jefferson", email: "test2@test.com", password: "123456", password_confirmation: "123456")
 User.create!(name: "Alexander Hamilton", email: "test3@test.com", password: "123456", password_confirmation: "123456")
-User.create!(name: "Admin", email: "admin@admin.com", password: "123456", password_confirmation: "123456", roles: "admin")
+User.create!(name: "Bottega Admin", email: "bottegaevents@gmail.com", password: "ilovetocode", password_confirmation: "ilovetocode", roles: "admin")
 
 puts "4 Users created!"
 puts "1 Admin created!"

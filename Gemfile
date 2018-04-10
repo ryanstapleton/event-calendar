@@ -60,8 +60,10 @@ gem 'gritter', '~> 1.2'
 gem 'carrierwave', '~> 1.2', '>= 1.2.2'
 gem 'mini_magick', '~> 4.8'
 gem 'carrierwave-aws', '~> 1.3'
-gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'petergate', '~> 1.8', '>= 1.8.1'
+
+gem 'omniauth-google-oauth2'  
 
 ruby "2.4.1"
