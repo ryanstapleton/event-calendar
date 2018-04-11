@@ -59,7 +59,12 @@ class EventsController < ApplicationController
       format.html { redirect_to admin_path, notice: 'The event was approved.' }
     end
 
-    # TODO: API CALL - insert event into API
+
+    # TODO: 
+    # Make an event hash formatted for google
+    # API CALL - insert event into API
+    # @calendar = GoogleCalendarWrapper.new(current_user)
+    # @calendar.book_rooms(@event)
   end
 
   def reject

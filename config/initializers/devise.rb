@@ -281,5 +281,5 @@ Devise.setup do |config|
     { access_type: "offline", 
       prompt: "consent",
       select_account: true,
-      scope: 'userinfo.email, userinfo.profile, calendar' }
+      scope: 'userinfo.email, calendar' }
 end

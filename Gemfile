@@ -64,6 +64,7 @@ gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'petergate', '~> 1.8', '>= 1.8.1'
 
-gem 'omniauth-google-oauth2'  
+gem 'omniauth-google-oauth2'
+gem 'google-api-client', '0.8.2', require: 'google/api_client'
 
 ruby "2.4.1"
