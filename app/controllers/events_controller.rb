@@ -55,16 +55,13 @@ class EventsController < ApplicationController
 
   def approve
     @event.approved!
+
+    @calendar = GoogleCalendarWrapper.new(current_user)
+    @calendar.insert(@event.format_for_google)
+    
     respond_to do |format|
       format.html { redirect_to admin_path, notice: 'The event was approved.' }
     end
-
-
-    # TODO: 
-    # Make an event hash formatted for google
-    # API CALL - insert event into API
-    # @calendar = GoogleCalendarWrapper.new(current_user)
-    # @calendar.book_rooms(@event)
   end
 
   def reject
@@ -92,6 +89,6 @@ class EventsController < ApplicationController
     end
 
     def event_params
-      params.require(:event).permit(:title, :body, :main_image, :date, :location)
+      params.require(:event).permit(:title, :body, :main_image, :start, :location)
     end
 end

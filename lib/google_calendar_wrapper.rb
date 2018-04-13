@@ -13,4 +13,21 @@ class GoogleCalendarWrapper
     @client.authorization.refresh!
     @service = @client.discovered_api('calendar', 'v3')
   end
-end  
+
+  # def calendar_id(event)
+  #   response = @client.execute(api_method:
+  #     @service.calendar_list.list)
+  #   calendars = JSON.parse(response.body)
+  #   calendar = calendars["items"].select {|cal|
+  #     cal["id"].downcase == event.calendar_id}
+  #   calendar["id"]
+  # end
+
+  def insert(formatted_event)
+    @client.execute(:api_method => @service.events.insert,
+                    :parameters => {'calendarId' => "bottegaevents@gmail.com", 'sendNotifications' => true},
+                    :body => JSON.dump(formatted_event),
+                    :headers => {'Content-Type' => 'application/json'})
+  end
+
+end
