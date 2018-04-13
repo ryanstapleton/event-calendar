@@ -31,7 +31,8 @@
         </div>
         <hr>
         <p>Event author: <%= @event.user.name %></p>
-        <p>Date: <%= @event.date %></p>
+        <p>On: <%= @event.start.strftime("%A, %B %d, %Y") %></p>
+        <p>At: <%= @event.start.strftime("%l:%M %p")%></p>
         <p>Location: <%= @event.location %>
         <p>Attending: <%= @event.rsvps.count %></p>
         <br>

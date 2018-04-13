@@ -24,12 +24,17 @@
     </div>
 
      <div class="form-group">
-      Date of the event.
-      <div><%= form.date_field :date, id: :event_date, class: "form-control" %></div>
+      Date of the event
+      <div><%= form.datetime_select :start, ampm: true, id: :event_date, class: "form-control" %></div>
     </div>
 
     <div class="form-group">
-      Please upload an image for the event. 
+      How long is the event
+      <div><%= form.select :end, ["1 hour", "2 hours", "3 hours", "4 hours", "5 hours", "6 hours"], id: :event_date, class: "form-control" %></div>
+    </div>
+
+    <div class="form-group">
+      Please upload an image for the event.
       <div><%= form.file_field :main_image, id: :image %></div>
     </div>
 

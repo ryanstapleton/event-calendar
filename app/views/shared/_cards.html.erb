@@ -12,7 +12,7 @@
         <div class="col-7 content-center">
           <h3><%= link_to truncate(event.title.titleize, length: 25), event, class: "card-heading" %></h3>
           <hr>
-          <span style="color: #3AE39F">When: &nbsp;&nbsp;</span><%= event.date.strftime("%A, %B %Y") %> 
+          <span style="color: #3AE39F">When: &nbsp;&nbsp;</span><%= event.start.strftime("%A, %B %d, %Y")%> 
           <br>
           <span style="color: #3AE39F">Where: &nbsp;</span><%= event.location %>
         </div>
