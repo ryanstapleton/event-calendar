@@ -27,6 +27,10 @@ module Events
     # -- all .rb files in that directory are automatically loaded.
 
     # Don't generate system test files.
+
+    config.time_zone = 'Etc/UTC'
+    config.active_record.default_timezone = :utc
+
     config.generators.system_tests = nil
     config.eager_load_paths << "#{Rails.root}/lib"
     config.secret_key_base = ENV["SECRET_KEY_BASE"]

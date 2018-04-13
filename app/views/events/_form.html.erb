@@ -8,33 +8,33 @@
 
   <div>
     <div class="form-group">
-      Title of your event:
-      <div><%= form.text_field :title, id: :event_title,  placeholder: "Event title here", class: "form-control" %>
+      Event title:
+      <div><%= form.text_field :title, id: :event_title, class: "form-control" %>
       </div>
     </div>
 
     <div class="form-group">
       Please describe your event:
-      <div><%= form.text_area :body, id: :event_body, size: "25x3", placeholder: "An event for ...", class: "form-control" %></div>
+      <div><%= form.text_area :body, id: :event_body, size: "25x3", class: "form-control" %></div>
     </div>
 
     <div class="form-group">
-      Where and when is your event taking place?:
-      <div><%= form.text_area :location, id: :event_location, placeholder: "Full address, floor number, time of day, etc..", size: "25x3", class: "form-control"%></div>
+      Where is your event taking place?
+      <div><%= form.text_area :location, id: :event_location, placeholder: "Full address, business name and zip, geographic point of interest, etc.", size: "25x3", class: "form-control"%></div>
     </div>
 
      <div class="form-group">
-      Date of the event
+      Date and time of the event:
       <div><%= form.datetime_select :start, ampm: true, id: :event_date, class: "form-control" %></div>
     </div>
 
     <div class="form-group">
-      How long is the event
+      How long will it be?
       <div><%= form.select :end, ["1 hour", "2 hours", "3 hours", "4 hours", "5 hours", "6 hours"], id: :event_date, class: "form-control" %></div>
     </div>
 
     <div class="form-group">
-      Please upload an image for the event.
+      Please upload an image for the event:
       <div><%= form.file_field :main_image, id: :image %></div>
     </div>
 

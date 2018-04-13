@@ -6,14 +6,14 @@ class Event < ApplicationRecord
   belongs_to :user
 
   mount_uploader :main_image, EventUploader
-  validates_presence_of :title, :body, :start, :location, :main_image
+  validates_presence_of :title, :body, :start, :end, :location, :main_image
 
   def format_for_google
     event_hash = {
       summary: self.title,
       location: self.location,
-      start: self.start.strftime("%Y-%m-%dT%H:%M:%S%z"),
-      end: (self.start + self.end.chomp(" hours").to_i.hours).strftime("%Y-%m-%dT%H:%M:%S%z"),
+      start: { dateTime: self.start.strftime("%Y-%m-%dT%H:%M:%S-0600") },
+      end: { dateTime: (self.start + self.end.chomp(" hours").to_i.hours).strftime("%Y-%m-%dT%H:%M:%S-0600") },
       description: self.body
     }
   end
