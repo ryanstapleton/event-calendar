@@ -1,6 +1,6 @@
 # README
 
-Reworked the app-in-a-day assigned by Bottega at 6 weeks. 
+An implementation of an events calendar in Ruby on Rails, linked to the Google Calendar API. 
 
 ## User Stories
 - Types of users
@@ -38,7 +38,7 @@ Reworked the app-in-a-day assigned by Bottega at 6 weeks.
 - Edit/New
 
 Feature REQs:
-- [ ] Google Calender (possibly google maps API)
+- [x] Google Calender
 - [x] Login/logout (Devise)
 - [x] CRUD events (Rails)
 - [x] RSVP and Favorites CRUD (Rails)
@@ -51,9 +51,9 @@ Feature REQs:
 - [x] Styling ala "devcamp" (Bootstrap)
 - [ ] Reminder of event (SMS - Twilio)
 - [ ] RSVP reminder (email, sms) - mailgun, twilio
+- [ ] Responsive
 
 TODOs:
 - [ ] Add phone number to users
-- [ ] Check Google API for needed parameters on events table
-- [ ] Remove edit functionality for users when event is approved
+- [ ] At URL level, remove edit functionality for users when event is approved 
 - [ ] Decide what to do with rejected events
