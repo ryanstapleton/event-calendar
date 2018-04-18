@@ -2,6 +2,27 @@
 
 An implementation of an events calendar in Ruby on Rails, linked to the Google Calendar API. 
 
+## Feature REQs:
+- [x] Google Calender
+- [x] Login/logout (Devise)
+- [x] CRUD events (Rails)
+- [x] RSVP and Favorites CRUD (Rails)
+- [x] Users can mark event as favorite (Rails)
+- [x] Users can mark event as RSVP (Rails)
+- [x] Users dashboard page (Rails)
+- [x] Design layouts (Bootsrap)
+- [x] My upcoming events (Rails)
+- [x] An event must be approved by admin to be published (Petergate)
+- [x] Styling ala "devcamp" (Bootstrap)
+- [ ] Reminder of event (SMS - Twilio)
+- [ ] RSVP reminder (email, sms) - mailgun, twilio
+- [ ] Responsive
+
+TODOs:
+- [ ] Add phone number to users
+- [ ] At URL level, remove edit functionality for users when event is approved 
+- [ ] Decide what to do with rejected events
+
 ## User Stories
 - Types of users
 &nbsp; - Admin
@@ -36,24 +57,3 @@ An implementation of an events calendar in Ruby on Rails, linked to the Google C
 - Register
 - Show
 - Edit/New
-
-Feature REQs:
-- [x] Google Calender
-- [x] Login/logout (Devise)
-- [x] CRUD events (Rails)
-- [x] RSVP and Favorites CRUD (Rails)
-- [x] Users can mark event as favorite (Rails)
-- [x] Users can mark event as RSVP (Rails)
-- [x] Users dashboard page (Rails)
-- [x] Design layouts (Bootsrap)
-- [x] My upcoming events (Rails)
-- [x] An event must be approved by admin to be published (Petergate)
-- [x] Styling ala "devcamp" (Bootstrap)
-- [ ] Reminder of event (SMS - Twilio)
-- [ ] RSVP reminder (email, sms) - mailgun, twilio
-- [ ] Responsive
-
-TODOs:
-- [ ] Add phone number to users
-- [ ] At URL level, remove edit functionality for users when event is approved 
-- [ ] Decide what to do with rejected events
