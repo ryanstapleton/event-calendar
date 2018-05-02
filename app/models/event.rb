@@ -18,4 +18,12 @@ class Event < ApplicationRecord
     }
   end
 
+  def self.approved
+    where(status: :approved).order(date: :desc)
+  end
+
+  def self.current
+    where("start >= ?", DateTime.now)
+  end
+
 end

@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   access all: [:show, :index], user: {except: [:admin]}, admin: :all
   
   def index
-    @events = Event.where(status: :approved).order(date: :desc)
+    @events = Event.current.approved
     @rsvps = current_user.rsvps if current_user
     @favorites = current_user.favorites if current_user
   end
