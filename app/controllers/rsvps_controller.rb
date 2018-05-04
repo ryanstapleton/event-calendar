@@ -8,6 +8,7 @@ class RsvpsController < ApplicationController
 
   def create
     @rsvp = Rsvp.create!(user_id: current_user.id, event_id: params[:event_id])
+    @rsvp.update!(start: @rsvp.event.start)
 
     respond_to do |format|
       if @rsvp.save
