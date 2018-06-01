@@ -24,3 +24,4 @@ puts "2 Events created by #{User.find(2).name}!"
 end
 
 puts "3 Events created by #{User.find(3).name}!"
+
